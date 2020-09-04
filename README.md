@@ -1,68 +1,51 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Entrance Test
 
-## Available Scripts
+Hello ! You are about to do a test at entrance for OrangeMaple.
+There is some prerequisites to make it possible to us to evaluate you.
 
-In the project directory, you can run:
+- You will need NodeJS
+- You will need Git and a GitHub account
 
-### `yarn start`
+You first have to clone this repository by typing
+```
+git clone https://github.com/OrangeMaple22/EntranceTest.git
+```
+After you created this repository, you will create a branch that will have your name, it will be the branch you will work on.
+\
+Then, you will need to install the packages with this command :
+```
+yarn install // If you are on Windows or MacOS
+yarnpkg install // If you are on Linux
+```
+And that is done ! You know just have to run this command to start to work
+```
+yarn run start // If you are on Windows or MacOS
+yarnpkg run start // If you are on Linux
+```
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## I] The Test
+It consists on creating a toolbar, that you will need to integrate from a Figma file, and there will be some actions to handle onClick into the button.
+\
+You start from file App.js in src, you have to create one file per Class.
+\
+Each of the buttons will create a React Component, that will be added to the DOM, they will all have a function that will change the title of the page (First *\<h1>\</h1>*), this function have to be inherited from a Parent Class, so this is the scheme
+```mermaid
+graph LR
+A(Parent Class with function changeTitle)-->B(Child Classes that will just have a render based on the title)
+A-->B
+A-->B
+A-->B
+```
+The render of the child components will be activated on Click
+They will display the previous text inside the Title (First \<h1>\</h1>) and add the number of the button inside a \<h4>\</h4>.
+When it is done, this click  will change the Title of the page.
+You are free to use whatever you want, this test is about Inheritance, React components and integration.
+Feel free to ask any questions during this test.
+You have one day ! Good luck !
+\
+Good to know :
+```
+The objectives of the test is to understand how you structure
+your code with specific rules.
+We then will have a talk about how you handle all of this.
+```
