@@ -28,13 +28,16 @@ It consists on creating a toolbar, that you will need to integrate from a Figma 
 \
 You start from file App.js in src, you have to create one file per Class.
 \
+\
 Each of the buttons will create a React Component, that will be added to the DOM, they will all have a function that will change the title of the page (First *\<h1>\</h1>*), this function have to be inherited from a Parent Class.
 \
-The render of the child components will be activated on Click
+\
+The render of the child components will be activated on Click.
 They will display the previous text inside the Title (First *\<h1>\</h1>*) and add the number of the button inside a \<h4>\</h4>.
 When it is done, this click  will change the Title of the page.
 You are free to use whatever you want, this test is about Inheritance, React components and integration.
 Feel free to ask any questions during this test. Good luck !
+\
 \
 Good to know :
 ```
