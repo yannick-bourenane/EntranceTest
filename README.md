@@ -10,7 +10,7 @@ You first have to clone this repository by typing
 ```
 git clone https://github.com/OrangeMaple22/EntranceTest.git
 ```
-After you created this repository, you will create a branch that will have your name, it will be the branch you will work on.
+After you created this repository, you will create a fork and when the work is finished you will be able to send the link of your test.
 \
 Then, you will need to install the packages with this command :
 ```
