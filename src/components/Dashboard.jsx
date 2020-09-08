@@ -9,9 +9,17 @@ export default class Dashboard extends Component {
     return (
       <div id={styles.dashboard}>
         {dashboardElements.length !== 0 ? (
-          <Grid gridTemplateColumns={"repeat(auto-fit, minmax(75px, 1fr))"}>
-            {dashboardElements.map((element) => (
-              <Element key={element.id} content={element} />
+          <Grid
+            gridTemplateColumns={"repeat(auto-fit, minmax(150px, 1fr))"}
+            gridGap={"15px"}
+          >
+            {dashboardElements.map((element, index) => (
+              <Element
+                key={index}
+                content={element}
+                index={index}
+                deleteDashboardElement={this.props.deleteDashboardElement}
+              />
             ))}
           </Grid>
         ) : (

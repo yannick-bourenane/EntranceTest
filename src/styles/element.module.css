@@ -1,0 +1,16 @@
+.close {
+    cursor: pointer;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}
+
+.element {
+    position: relative;
+    text-align: center;
+    background: #F6F9F8;
+    opacity: 0.7;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    padding: 15px;
+}

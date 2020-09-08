@@ -23,10 +23,11 @@ export default class App extends React.Component {
     });
   }
 
-  deleteDashboardElement(id) {
+  deleteDashboardElement(index) {
+    console.log("hey");
     this.setState({
       dashboardElements: this.state.dashboardElements.filter(
-        (element) => element.id !== id
+        (element, arrIndex) => arrIndex !== index
       ),
     });
   }
