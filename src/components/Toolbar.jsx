@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Button from "./Button";
+import styles from "../styles/toolbar.module.css";
 
 import Image from "../assets/buttons/Image.svg";
 import Pen from "../assets/buttons/Pen.svg";
@@ -44,7 +45,7 @@ const icons = [
 export default class Sidebar extends Component {
   render() {
     return (
-      <ul id="toolbar">
+      <ul id={styles.toolbar}>
         {icons.length &&
           icons.map((icon) => (
             <Button

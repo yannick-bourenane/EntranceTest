@@ -1,7 +1,7 @@
 import React from "react";
 import Toolbar from "./components/Toolbar";
 import Dashboard from "./components/Dashboard";
-import Flex from "./components/Flex";
+import Flex from "./components/wrapper/Flex";
 
 export default class App extends React.Component {
   constructor(props) {
@@ -33,11 +33,11 @@ export default class App extends React.Component {
   render() {
     return (
       <>
-        <h1>{this.state.title}</h1>
+        <h1 className="main-title">{this.state.title}</h1>
         <Flex
           flexDirection={"row"}
           justifyContent={"space-between"}
-          alignItems={"center"}
+          alignItems={"flex-start"}
         >
           <Toolbar updateDashboard={this.callbacks.updateDashboard} />
           <Dashboard

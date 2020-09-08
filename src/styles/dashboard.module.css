@@ -1,0 +1,10 @@
+#dashboard {
+    width: stretch;
+    padding: 15px;
+}
+
+.element {
+    width: 25%;
+    padding: 10px;
+    border: var(--primary-color);
+}
