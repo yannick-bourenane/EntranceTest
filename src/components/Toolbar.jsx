@@ -45,7 +45,14 @@ export default class Sidebar extends Component {
   render() {
     return (
       <ul id="toolbar">
-        {icons.length && icons.map((icon) => <Button icon={icon} />)}
+        {icons.length &&
+          icons.map((icon) => (
+            <Button
+              key={icon.id}
+              icon={icon}
+              updateDashboard={this.props.updateDashboard}
+            />
+          ))}
       </ul>
     );
   }
