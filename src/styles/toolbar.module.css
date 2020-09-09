@@ -18,3 +18,23 @@
 #toolbar li:first-of-type {
     margin-top: 25px;
 }
+
+@media screen and (max-width: 950px) {
+    #toolbar {
+        position: fixed;
+        bottom: 0;
+        z-index: 999;
+        width: 100%;
+        height: auto;
+        padding: 10px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        list-style: none;
+    }
+
+    #toolbar li,
+    #toolbar li:first-of-type {
+        margin: 0
+    }
+}

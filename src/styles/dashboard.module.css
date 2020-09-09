@@ -8,3 +8,9 @@
     padding: 10px;
     border: var(--primary-color);
 }
+
+@media screen and (max-width: 950px) {
+    #dashboard {
+        padding-bottom: 85px;
+    }
+}

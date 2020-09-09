@@ -26,6 +26,7 @@ body {
 
 h1.main-title {
     max-height: 10vh;
+    color: var(--primary-color);
 }
 
 .button {
