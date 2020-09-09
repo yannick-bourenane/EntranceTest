@@ -1,7 +1,9 @@
 import React from "react";
 import Toolbar from "./components/Toolbar";
 import Dashboard from "./components/Dashboard";
+import Header from "./components/Header";
 import Flex from "./components/wrapper/Flex";
+import Wrap from "./components/wrapper/Wrap";
 
 export default class App extends React.Component {
   constructor(props) {
@@ -34,7 +36,10 @@ export default class App extends React.Component {
   render() {
     return (
       <>
-        <h1 className="main-title">{this.state.title}</h1>
+        <Header />
+        <Wrap>
+          <h1 className="main-title">{this.state.title}</h1>
+        </Wrap>
         <Flex
           flexDirection={"row"}
           justifyContent={"space-between"}

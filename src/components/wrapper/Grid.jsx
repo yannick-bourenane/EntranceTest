@@ -6,8 +6,9 @@ export default class Grid extends Component {
       gridTemplateColumns: this.props.gridTemplateColumns || "auto",
       gridGap: this.props.gridGap || "0px",
     };
+    const className = this.props.className ? " " + this.props.className : "";
     return (
-      <div className="grid" style={styleList}>
+      <div className={`grid${className}`} style={styleList}>
         {this.props.children}
       </div>
     );

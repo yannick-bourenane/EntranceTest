@@ -2,6 +2,7 @@ import React, { Component } from "react";
 
 export default class Wrap extends Component {
   render() {
-    return <div className="wrap">{this.props.children}</div>;
+    const className = this.props.className ? " " + this.props.className : "";
+    return <div className={`wrap${className}`}>{this.props.children}</div>;
   }
 }

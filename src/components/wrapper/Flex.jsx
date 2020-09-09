@@ -7,8 +7,9 @@ export default class Flex extends Component {
       alignItems: this.props.alignItems || "flex-start",
       justifyContent: this.props.justifyContent || "flex-start",
     };
+    const className = this.props.className ? " " + this.props.className : "";
     return (
-      <div className="flex" style={styleList}>
+      <div className={`flex${className}`} style={styleList}>
         {this.props.children}
       </div>
     );

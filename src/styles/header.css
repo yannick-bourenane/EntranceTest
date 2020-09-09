@@ -1,0 +1,74 @@
+header {
+    border-bottom: 2px solid rgba(16, 37, 66, 0.5);
+}
+
+header ul {
+    list-style: none;
+}
+
+header .breadcrumb {
+    width: 284px;
+    height: 40px;
+    background: rgba(205, 215, 214, 0.7);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 25px;
+    padding-left: 8px;
+}
+
+header .breadcrumb li {
+    padding: 3px;
+    display: inline-block;
+}
+
+header .breadcrumb-icon {
+    height: inherit;
+    width: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(205, 215, 214, 0.8);
+    border-radius: 5px;
+}
+
+header .button {
+    width: 159px;
+}
+
+header .button.secondary {
+    background: var(--secondary-color);
+}
+
+header .button.secondary-revert {
+    background-color: #FFF;
+    border: 1px solid var(--secondary-color);
+    color: var(--secondary-color);
+}
+
+header .button.has-icon {
+    width: auto;
+}
+
+header .button>* {
+    padding: 5px;
+}
+
+header #log-info {
+    background-color: var(--secondary-color);
+    border-radius: 100px;
+    color: #FFF;
+    font-size: 15px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+header nav .button {
+    margin-right: 20px;
+}
