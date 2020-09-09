@@ -51,7 +51,7 @@ export default class Sidebar extends Component {
             <Button
               key={icon.id}
               icon={icon}
-              updateDashboard={this.props.updateDashboard}
+              addDashboardTool={this.props.addDashboardTool}
             />
           ))}
       </ul>

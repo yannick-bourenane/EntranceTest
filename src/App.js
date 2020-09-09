@@ -13,12 +13,12 @@ export default class App extends React.Component {
       dashboardTools: [],
     };
     this.callbacks = {
-      updateDashboard: this.updateDashboard.bind(this),
+      addDashboardTool: this.addDashboardTool.bind(this),
       deleteDashboardTool: this.deleteDashboardTool.bind(this),
     };
   }
-
-  updateDashboard(tool) {
+  addDashboardTool(tool) {
+    // Adding a new tool to the array
     this.setState({
       dashboardTools: [...this.state.dashboardTools, tool],
       title: tool.description,
@@ -26,6 +26,7 @@ export default class App extends React.Component {
   }
 
   deleteDashboardTool(index) {
+    // Remove the targeted tool by filtering the array
     this.setState({
       dashboardTools: this.state.dashboardTools.filter(
         (tool, arrIndex) => arrIndex !== index
@@ -44,7 +45,7 @@ export default class App extends React.Component {
           justifyContent={"space-between"}
           alignItems={"flex-start"}
         >
-          <Toolbar updateDashboard={this.callbacks.updateDashboard} />
+          <Toolbar addDashboardTool={this.callbacks.addDashboardTool} />
           <Dashboard
             deleteDashboardTool={this.callbacks.deleteDashboardTool}
             dashboardTools={this.state.dashboardTools}

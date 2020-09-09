@@ -7,7 +7,7 @@ export default class Button extends Component {
         <img
           src={this.props.icon.link}
           alt={this.props.icon.description}
-          onClick={() => this.props.updateDashboard(this.props.icon)}
+          onClick={() => this.props.addDashboardTool(this.props.icon)}
         />
       </li>
     );

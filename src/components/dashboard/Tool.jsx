@@ -29,7 +29,7 @@ export default class Tool extends Component {
       ) : (
         <Structure toolData={propsToSend} />
       );
-
+    // The tools are identicals, but the point is to make them scalable
     return <React.Fragment>{componentToDisplay}</React.Fragment>;
   }
 }
