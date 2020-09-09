@@ -10,26 +10,26 @@ export default class App extends React.Component {
     super(props);
     this.state = {
       title: "This is the first title : ",
-      dashboardElements: [],
+      dashboardTools: [],
     };
     this.callbacks = {
       updateDashboard: this.updateDashboard.bind(this),
-      deleteDashboardElement: this.deleteDashboardElement.bind(this),
+      deleteDashboardTool: this.deleteDashboardTool.bind(this),
     };
   }
 
-  updateDashboard(element) {
+  updateDashboard(tool) {
     this.setState({
-      dashboardElements: [...this.state.dashboardElements, element],
-      title: element.description,
+      dashboardTools: [...this.state.dashboardTools, tool],
+      title: tool.description,
     });
   }
 
-  deleteDashboardElement(index) {
+  deleteDashboardTool(index) {
     console.log("hey");
     this.setState({
-      dashboardElements: this.state.dashboardElements.filter(
-        (element, arrIndex) => arrIndex !== index
+      dashboardTools: this.state.dashboardTools.filter(
+        (tool, arrIndex) => arrIndex !== index
       ),
     });
   }
@@ -47,8 +47,8 @@ export default class App extends React.Component {
         >
           <Toolbar updateDashboard={this.callbacks.updateDashboard} />
           <Dashboard
-            deleteDashboardElement={this.callbacks.deleteDashboardElement}
-            dashboardElements={this.state.dashboardElements}
+            deleteDashboardTool={this.callbacks.deleteDashboardTool}
+            dashboardTools={this.state.dashboardTools}
           />
         </Flex>
       </>

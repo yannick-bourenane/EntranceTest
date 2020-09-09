@@ -1,74 +1,160 @@
 header {
-    border-bottom: 2px solid rgba(16, 37, 66, 0.5);
+  border-bottom: 2px solid rgba(16, 37, 66, 0.5);
 }
 
 header ul {
-    list-style: none;
+  list-style: none;
 }
 
 header .breadcrumb {
-    width: 284px;
-    height: 40px;
-    background: rgba(205, 215, 214, 0.7);
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-left: 25px;
-    padding-left: 8px;
+  width: 284px;
+  height: 40px;
+  background: rgba(205, 215, 214, 0.7);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 25px;
+  padding-left: 8px;
 }
 
 header .breadcrumb li {
-    padding: 3px;
-    display: inline-block;
+  padding: 3px;
+  display: inline-block;
 }
 
 header .breadcrumb-icon {
-    height: inherit;
-    width: 54px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: rgba(205, 215, 214, 0.8);
-    border-radius: 5px;
+  height: inherit;
+  width: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(205, 215, 214, 0.8);
+  border-radius: 5px;
 }
 
 header .button {
-    width: 159px;
+  width: 159px;
 }
 
 header .button.secondary {
-    background: var(--secondary-color);
+  background: var(--secondary-color);
 }
 
 header .button.secondary-revert {
-    background-color: #FFF;
-    border: 1px solid var(--secondary-color);
-    color: var(--secondary-color);
+  background-color: #fff;
+  border: 1px solid var(--secondary-color);
+  color: var(--secondary-color);
 }
 
 header .button.has-icon {
-    width: auto;
+  width: auto;
 }
 
-header .button>* {
-    padding: 5px;
+header .button > * {
+  padding: 5px;
 }
 
 header #log-info {
-    background-color: var(--secondary-color);
-    border-radius: 100px;
-    color: #FFF;
-    font-size: 15px;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: 500;
-    cursor: pointer;
+  background-color: var(--secondary-color);
+  border-radius: 100px;
+  color: #fff;
+  font-size: 15px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  cursor: pointer;
 }
 
 header nav .button {
-    margin-right: 20px;
+  margin-right: 20px;
+}
+header .hamburger {
+  cursor: pointer;
+}
+header nav.responsive .button {
+  margin-bottom: 25px;
+}
+header .breadcrumb.responsive {
+  width: auto;
+  font-size: 13px;
+  padding-right: 8px;
+}
+header .breadcrumb.responsive .breadcrumb-icon {
+  display: none;
+}
+header nav.bm-item-list #log-info {
+  margin: 0 auto;
+}
+/* Burger Menu */
+/* Position and sizing of burger button */
+.bm-burger-button {
+  position: fixed;
+  width: 36px;
+  height: 30px;
+  right: 30px;
+  top: 20px;
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: var(--primary-color);
+}
+
+/* Color/shape of burger icon bars on hover*/
+.bm-burger-bars-hover {
+  background: var(--secondary-color);
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+  background: #bdc3c7;
+}
+
+/*
+Sidebar wrapper styles
+Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
+*/
+.bm-menu-wrap {
+  position: fixed;
+  height: 100%;
+  top: 0;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background: var(--primary-color);
+  padding: 2.5em 1.5em 0;
+  font-size: 1.15em;
+  text-align: center;
+}
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+  fill: var(--primary-color);
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+  color: #b8b7ad;
+  padding: 0.8em;
+}
+
+/* Individual item */
+.bm-item {
+  display: inline-block;
+}
+
+/* Styling of overlay */
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
 }

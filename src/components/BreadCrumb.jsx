@@ -4,7 +4,7 @@ import IconBreadCrumb from "../assets/images/IconBreadCrumb.svg";
 export default class BreadCrumb extends Component {
   render() {
     return (
-      <div className="breadcrumb">
+      <div className={`breadcrumb ${this.props.isResponsive && "responsive"}`}>
         <ul>
           <li>Workshop name</li>
           <li>

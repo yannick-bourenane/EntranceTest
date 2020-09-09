@@ -1,29 +1,29 @@
 import React, { Component } from "react";
-import Element from "./Element";
+import Tool from "./Tool";
 import styles from "../styles/dashboard.module.css";
 import Grid from "./wrapper/Grid";
 
 export default class Dashboard extends Component {
   render() {
-    const dashboardElements = this.props.dashboardElements;
+    const dashboardTools = this.props.dashboardTools;
     return (
       <div id={styles.dashboard}>
-        {dashboardElements.length !== 0 ? (
+        {dashboardTools.length !== 0 ? (
           <Grid
             gridTemplateColumns={"repeat(auto-fit, minmax(150px, 1fr))"}
             gridGap={"15px"}
           >
-            {dashboardElements.map((element, index) => (
-              <Element
+            {dashboardTools.map((tool, index) => (
+              <Tool
                 key={index}
-                content={element}
+                content={tool}
                 index={index}
-                deleteDashboardElement={this.props.deleteDashboardElement}
+                deleteDashboardTool={this.props.deleteDashboardTool}
               />
             ))}
           </Grid>
         ) : (
-          <p>Click on a button on the toolbar to add your first element</p>
+          <p>Click on a button from the toolbar to add your first element</p>
         )}
       </div>
     );
