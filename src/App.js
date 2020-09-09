@@ -1,6 +1,6 @@
 import React from "react";
-import Toolbar from "./components/Toolbar";
-import Dashboard from "./components/Dashboard";
+import Toolbar from "./components/toolbar/Toolbar";
+import Dashboard from "./components/dashboard/Dashboard";
 import Header from "./components/Header";
 import Flex from "./components/wrapper/Flex";
 import Wrap from "./components/wrapper/Wrap";
@@ -26,7 +26,6 @@ export default class App extends React.Component {
   }
 
   deleteDashboardTool(index) {
-    console.log("hey");
     this.setState({
       dashboardTools: this.state.dashboardTools.filter(
         (tool, arrIndex) => arrIndex !== index

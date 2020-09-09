@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 import Button from "./Button";
-import styles from "../styles/toolbar.module.css";
+import styles from "../../styles/toolbar.module.css";
 
-import Image from "../assets/buttons/Image.svg";
-import Pen from "../assets/buttons/Pen.svg";
-import Square from "../assets/buttons/Square.svg";
-import StickyNote from "../assets/buttons/StickyNote.svg";
-import Structure from "../assets/buttons/Structure.svg";
-import Text from "../assets/buttons/Text.svg";
+import Image from "../../assets/buttons/Image.svg";
+import Pen from "../../assets/buttons/Pen.svg";
+import Square from "../../assets/buttons/Square.svg";
+import StickyNote from "../../assets/buttons/StickyNote.svg";
+import Structure from "../../assets/buttons/Structure.svg";
+import Text from "../../assets/buttons/Text.svg";
 
 const icons = [
   {

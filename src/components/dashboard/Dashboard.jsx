@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Tool from "./Tool";
-import styles from "../styles/dashboard.module.css";
-import Grid from "./wrapper/Grid";
+import styles from "../../styles/dashboard.module.css";
+import Grid from "../wrapper/Grid";
 
 export default class Dashboard extends Component {
   render() {
