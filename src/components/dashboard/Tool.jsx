@@ -15,20 +15,29 @@ export default class Tool extends Component {
       deleteDashboardTool: this.props.deleteDashboardTool,
     };
     const id = this.props.content.id;
-    let componentToDisplay =
-      id === 1 ? (
-        <StickyNote toolData={propsToSend} />
-      ) : id === 2 ? (
-        <Text toolData={propsToSend} />
-      ) : id === 3 ? (
-        <Square toolData={propsToSend} />
-      ) : id === 4 ? (
-        <Pen toolData={propsToSend} />
-      ) : id === 5 ? (
-        <Image toolData={propsToSend} />
-      ) : (
-        <Structure toolData={propsToSend} />
-      );
+    let componentToDisplay = "";
+    switch (id) {
+      case 1:
+        componentToDisplay = <StickyNote toolData={propsToSend} />;
+        break;
+      case 2:
+        componentToDisplay = <Text toolData={propsToSend} />;
+        break;
+      case 3:
+        componentToDisplay = <Square toolData={propsToSend} />;
+        break;
+      case 4:
+        componentToDisplay = <Pen toolData={propsToSend} />;
+        break;
+      case 5:
+        componentToDisplay = <Image toolData={propsToSend} />;
+        break;
+      case 6:
+        componentToDisplay = <Structure toolData={propsToSend} />;
+        break;
+      default:
+        componentToDisplay = "Component not found";
+    }
     // The tools are identicals, but the point is to make them scalable
     return <React.Fragment>{componentToDisplay}</React.Fragment>;
   }
