@@ -21,7 +21,6 @@ export default class App extends React.Component {
     // Adding a new tool to the array
     this.setState({
       dashboardTools: [...this.state.dashboardTools, tool],
-      title: tool.description,
     });
   }
 
@@ -45,7 +44,10 @@ export default class App extends React.Component {
           justifyContent={"space-between"}
           alignItems={"flex-start"}
         >
-          <Toolbar addDashboardTool={this.callbacks.addDashboardTool} />
+          <Toolbar
+            addDashboardTool={this.callbacks.addDashboardTool}
+            setTitle={(newTitle) => this.setState({ title: newTitle })}
+          />
           <Dashboard
             deleteDashboardTool={this.callbacks.deleteDashboardTool}
             dashboardTools={this.state.dashboardTools}

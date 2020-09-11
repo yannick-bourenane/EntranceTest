@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Tool from "./Tool";
+import ToolDispatch from "./ToolDispatch";
 import styles from "../../styles/dashboard.module.css";
 import Grid from "../wrapper/Grid";
 
@@ -14,7 +14,7 @@ export default class Dashboard extends Component {
             gridGap={"15px"}
           >
             {dashboardTools.map((tool, index) => (
-              <Tool
+              <ToolDispatch
                 key={index}
                 content={tool}
                 index={index}

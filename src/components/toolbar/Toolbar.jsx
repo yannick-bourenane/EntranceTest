@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Button from "./Button";
+import ButtonDispatch from "./ButtonDispatch";
 import styles from "../../styles/toolbar.module.css";
 
 import Image from "../../assets/buttons/Image.svg";
@@ -48,7 +48,8 @@ export default class Sidebar extends Component {
       <ul id={styles.toolbar}>
         {icons.length &&
           icons.map((icon) => (
-            <Button
+            <ButtonDispatch
+              setTitle={this.props.setTitle}
               key={icon.id}
               icon={icon}
               addDashboardTool={this.props.addDashboardTool}
