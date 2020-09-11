@@ -19,6 +19,7 @@ export default class App extends React.Component {
   }
   addDashboardTool(tool) {
     // Adding a new tool to the array
+    console.log("hey");
     this.setState({
       dashboardTools: [...this.state.dashboardTools, tool],
     });
